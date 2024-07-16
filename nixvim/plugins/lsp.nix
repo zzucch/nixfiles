@@ -1,0 +1,51 @@
+{
+  programs.nixvim.plugins = {
+    lsp = {
+      enable = true;
+
+      keymaps = {
+        silent = true;
+        diagnostic = {
+          "<leader>k" = "goto_prev";
+          "<leader>j" = "goto_next";
+        };
+
+        lspBuf = {
+          "<leader>f" = "format";
+          K = "hover";
+          gd = "definition";
+          gD = "declaration";
+          gI = "implementation";
+          "<leader>vca" = "code_action";
+          "<leader>vrf" = "references";
+          "<leader>vrn" = "rename";
+          gt = "type_definition";
+          gi = "implementation";
+        };
+      };
+
+      servers = {
+        nil-ls = {
+          enable = true;
+          settings = {
+            formatting.command = ["alejandra"];
+          };
+        };
+        lua-ls.enable = true;
+        bashls.enable = true;
+        gopls.enable = true;
+        dockerls.enable = true;
+        docker-compose-language-service.enable = true;
+        tsserver.enable = true;
+        rust-analyzer = {
+          enable = true;
+          installCargo = true;
+          installRustc = true;
+          settings = {
+            cargo.features = "all";
+          };
+        };
+      };
+    };
+  };
+}
