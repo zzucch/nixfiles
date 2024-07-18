@@ -29,6 +29,8 @@
         "XDG_SESSION_DESKTOP,Hyprland"
         "XCURSOR_SIZE, 24"
         "HYPRCURSOR_SIZE, 24"
+        # required until https://github.com/ankitects/anki/issues/1767 is closed
+        "ANKI_WAYLAND, 1"
         # "QT_IM_MODULE, fcitx"
       ];
 
@@ -156,6 +158,7 @@
         "$mainMod,       B, exec, $browser"
         "$mainMod SHIFT, B, exec, $browser --incognito"
         "$mainMod,       D, exec, $menu"
+        "$mainMod SHIFT, D, exec, wofi --show=drun | xargs hyprctl dispatch exec --"
         "$mainMod,       Q, exec, $terminal"
         # TODO: figure out why its not working
         "$mainMod,       W, exec, killall -SIGUSR1 waybar"
@@ -168,7 +171,7 @@
         "$mainMod,       F,   fullscreen"
         "$mainMod SHIFT, F,   fakefullscreen"
         "$mainMod SHIFT, M,   exit, "
-        "$mainMod SHIFT, D,   exec, swww clear 000000"
+        "$mainMod SHIFT, W,   exec, swww clear 000000"
 
         "$mainMod, H, movefocus, l"
         "$mainMod, J, movefocus, d"

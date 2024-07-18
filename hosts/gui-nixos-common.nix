@@ -3,8 +3,10 @@
   environment.systemPackages = with pkgs; [
     kitty
     tofi
+    wofi
     google-chrome
     telegram-desktop
+    anki-bin
     obs-studio
     imv
     mpv
