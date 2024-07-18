@@ -4,8 +4,6 @@
     settings = {
       font = "JetBrainsMono Nerd Font Mono";
       font-size = 16;
-      font-features = "";
-      font-variations = "";
       hint-font = true;
       text-color = "#cdd6f4";
       prompt-background = "#00000000";
@@ -30,7 +28,6 @@
       text-cursor-corner-radius = 0;
       prompt-text = "run: ";
       prompt-padding = 0;
-      placeholder-text = "";
       num-results = 0;
       result-spacing = 0;
       horizontal = false;
@@ -49,7 +46,6 @@
       padding-right = 8;
       clip-to-padding = true;
       scale = true;
-      output = "";
       anchor = "center";
       exclusive-zone = -1;
       margin-top = 0;
@@ -59,13 +55,10 @@
       hide-cursor = false;
       text-cursor = false;
       history = true;
-      matching-algorithm = "normal";
       require-match = true;
       auto-accept-single = false;
       hide-input = false;
       hidden-character = "*";
-      physical-keybindings = true;
-      print-index = false;
       drun-launch = false;
       late-keyboard-init = false;
       multi-instance = false;

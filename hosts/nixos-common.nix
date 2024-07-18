@@ -3,8 +3,6 @@
     allowUnfree = true;
   };
   environment.systemPackages = with pkgs; [
-    # neovim
-
     gnumake
     gcc
     go

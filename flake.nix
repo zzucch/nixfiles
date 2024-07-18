@@ -43,8 +43,8 @@
         inherit system;
         modules =
           [
-            home-manager.nixosModules.home-manager
             inputs.nixvim.nixosModules.nixvim
+            home-manager.nixosModules.home-manager
             {home-manager.extraSpecialArgs = specialArgsMerged;}
           ]
           ++ modules;
