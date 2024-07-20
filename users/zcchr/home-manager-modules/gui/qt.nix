@@ -1,7 +1,7 @@
 {
   qt = {
     enable = true;
-    platformTheme.name = "qtct";
-    style.name = "kvantum";
+    platformTheme.name = "adwaita";
+    style.name = "adwaita-dark";
   };
 }
