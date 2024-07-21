@@ -8,5 +8,6 @@
     ./swaylock.nix
     ./tofi.nix
     ./waybar.nix
+    ./spotify.nix
   ];
 }
