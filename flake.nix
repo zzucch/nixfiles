@@ -24,6 +24,14 @@
       abs = path: ./. + ("/" + path);
     };
     system = "x86_64-linux";
+    supportedSystems = [system];
+    forEachSupportedSystem = f:
+      inputs.nixpkgs.lib.genAttrs supportedSystems (system:
+        f {
+          pkgs = import inputs.nixpkgs {
+            inherit system;
+          };
+        });
     mkNixosSystem = {
       system,
       modules ? [],
@@ -51,6 +59,13 @@
         specialArgs = specialArgsMerged;
       };
   in {
+    devShells = forEachSupportedSystem ({pkgs}: {
+      default = pkgs.mkShell {
+        packages = with pkgs; [
+          alejandra
+        ];
+      };
+    });
     nixosConfigurations = {
       dennou = mkNixosSystem {
         inherit system;

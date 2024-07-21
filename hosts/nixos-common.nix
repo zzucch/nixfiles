@@ -3,14 +3,9 @@
     allowUnfree = true;
   };
   environment.systemPackages = with pkgs; [
-    gnumake
-    gcc
-    go
-    nodejs
-    rustup
-    alejandra
-
     tmux
+    direnv
+    nix-direnv
     git
     lazygit
     gh
