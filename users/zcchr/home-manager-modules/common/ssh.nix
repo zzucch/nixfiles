@@ -4,8 +4,11 @@
   programs.ssh = {
     enable = true;
     matchBlocks = {
+      "*" = {
+        identityFile = "~/.ssh/git-sign";
+      };
       "github.com" = {
-        identityFile = "~/.ssh/git.pub";
+        identityFile = "~/.ssh/git";
       };
     };
   };
