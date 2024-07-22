@@ -7,6 +7,7 @@
       commit.gpgsign = true;
       gpg.format = "ssh";
       user.signingkey = "~/.ssh/git-sign.pub";
+      push.autoSetupRemote = "true";
     };
   };
   programs.gh = {
