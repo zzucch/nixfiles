@@ -2,14 +2,12 @@
   programs.nixvim.plugins = {
     lsp = {
       enable = true;
-
       keymaps = {
         silent = true;
         diagnostic = {
           "<leader>k" = "goto_prev";
           "<leader>j" = "goto_next";
         };
-
         lspBuf = {
           "<leader>f" = "format";
           K = "hover";
@@ -23,7 +21,6 @@
           gi = "implementation";
         };
       };
-
       servers = {
         nil-ls = {
           enable = true;
@@ -39,12 +36,14 @@
         tsserver.enable = true;
         rust-analyzer = {
           enable = true;
-          installCargo = true;
-          installRustc = true;
+          installCargo = false;
+          installRustc = false;
           settings = {
             cargo.features = "all";
           };
         };
+        marksman.enable = true;
+        yamlls.enable = true;
       };
     };
   };
