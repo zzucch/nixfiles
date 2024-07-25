@@ -31,6 +31,7 @@
         lua-ls.enable = true;
         bashls.enable = true;
         gopls.enable = true;
+        gleam.enable = true;
         dockerls.enable = true;
         docker-compose-language-service.enable = true;
         tsserver.enable = true;
