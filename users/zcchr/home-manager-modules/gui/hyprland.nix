@@ -11,14 +11,14 @@
 
       exec-once = [
         "waybar"
-        # "fcitx5"
+        "fcitx5"
         "[workspace 2] kitty"
         "swww-daemon"
         "swww clear 000000"
       ];
 
       "$terminal" = "kitty";
-      "$browser" = "google-chrome-stable";
+      "$browser" = "google-chrome-stable --enable-wayland-ime";
       "$menu" = "tofi-drun | xargs hyprctl dispatch exec --";
 
       "$mainMod" = "SUPER";
@@ -31,7 +31,9 @@
         "HYPRCURSOR_SIZE, 24"
         # required until https://github.com/ankitects/anki/issues/1767 is closed
         "ANKI_WAYLAND, 1"
-        # "QT_IM_MODULE, fcitx"
+        # do not set GTK_IM_MODULE
+        "GLFW_IM_MODULE, ibus"
+        "QT_IM_MODULE, fcitx"
       ];
 
       input = {

@@ -8,7 +8,6 @@
     telegram-desktop
     anki-bin
     obs-studio
-    rnote
     imv
     mpv
 
