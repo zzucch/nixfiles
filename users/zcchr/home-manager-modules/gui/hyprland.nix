@@ -148,7 +148,6 @@
 
       # tiling feels bad there
       windowrule = [
-        "float,  waypaper"
         "float,  title:Open File"
         "center, title:Open File"
       ];
@@ -221,13 +220,13 @@
         "$mainMod, Space, exec, hyprctl switchxkblayout sino-wealth-gaming-kb- next"
 
         # i mean
-        ''$mainMod, O, exec, hyprctl keyword monitor "eDP-1,1920x1080@60,0x0,1"''
+        ''$mainMod SHIFT, O, exec, hyprctl keyword monitor "eDP-1,1920x1080@60,0x0,1"''
         "$mainMod, R, exec, hyprctl reload"
 
         # enabling decorations
-        "$mainMod SHIFT, O, exec, hyprctl keyword decoration:drop_shadow true"
-        "$mainMod SHIFT, O, exec, hyprctl keyword decoration:blur:enabled true"
-        "$mainMod SHIFT, O, exec, hyprctl keyword decoration:inactive_opacity 0.75"
+        "$mainMod, O, exec, hyprctl keyword decoration:drop_shadow true"
+        "$mainMod, O, exec, hyprctl keyword decoration:blur:enabled true"
+        "$mainMod, O, exec, hyprctl keyword decoration:inactive_opacity 0.75"
       ];
 
       # -e allows press and hold, volume limited to 150%
@@ -247,7 +246,6 @@
 
       # layer rules:
       layerrule = [
-        "blur, waybar"
         "noanim, waybar"
       ];
     };

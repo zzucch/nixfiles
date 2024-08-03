@@ -5,8 +5,7 @@
     package = pkgs-stable.waybar;
     settings = {
       mainBar = {
-        # mode = "hide";
-        # start_hidden = true;
+        start_hidden = true;
         layer = "top";
         position = "bottom";
         height = 0;

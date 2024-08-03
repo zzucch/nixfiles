@@ -1,7 +1,6 @@
 {
   config,
   abs,
-  pkgs,
   ...
 }: {
   services.openssh = {
