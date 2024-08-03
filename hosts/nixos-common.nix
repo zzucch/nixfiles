@@ -3,25 +3,27 @@
     allowUnfree = true;
   };
   environment.systemPackages = with pkgs; [
-    tmux
+    home-manager
+
     direnv
     nix-direnv
-    git
+
     lazygit
-    gh
+
+    tree
+    scc
     neofetch
     fastfetch
-    wget
+
     btop
     htop
+
+    wget
     zip
     unzip
     ffmpeg
-    brightnessctl
+    killall
     ripgrep
-    tree
-    scc
-
-    home-manager
+    brightnessctl
   ];
 }

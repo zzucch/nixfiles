@@ -162,8 +162,7 @@
         "$mainMod,       D, exec, $menu"
         "$mainMod SHIFT, D, exec, wofi --show=drun | xargs hyprctl dispatch exec --"
         "$mainMod,       Q, exec, $terminal"
-        # TODO: figure out why its not working
-        "$mainMod,       W, exec, killall -SIGUSR1 waybar"
+        "$mainMod,       W, exec, killall -SIGUSR1 -r waybar"
         "$mainMod,       E, exec, [float] $terminal"
         "$mainMod SHIFT, L, exec, swaylock"
 

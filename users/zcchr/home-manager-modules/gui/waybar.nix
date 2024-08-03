@@ -1,6 +1,8 @@
-{
+{pkgs-stable, ...}: {
   programs.waybar = {
     enable = true;
+    # TODO: restore when https://github.com/Alexays/Waybar/pull/3459 is released
+    package = pkgs-stable.waybar;
     settings = {
       mainBar = {
         # mode = "hide";

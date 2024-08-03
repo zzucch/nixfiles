@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   imports = [./nixos-common.nix];
   environment.systemPackages = with pkgs; [
-    kitty
     tofi
     wofi
     google-chrome
@@ -12,12 +11,9 @@
     mpv
 
     xdg-desktop-portal-hyprland
-    xwayland
     wl-clipboard
 
-    hyprland
-    hyprcursor
-    waybar
+    # hyprcursor
     grim
     slurp
     swww
