@@ -7,13 +7,12 @@
     telegram-desktop
     anki-bin
     obs-studio
+    rnote
     imv
     mpv
 
-    xdg-desktop-portal-hyprland
     wl-clipboard
 
-    # hyprcursor
     grim
     slurp
     swww

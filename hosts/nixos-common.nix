@@ -8,10 +8,9 @@
     direnv
     nix-direnv
 
-    lazygit
-
     tree
     scc
+    lazygit
     neofetch
     fastfetch
 
