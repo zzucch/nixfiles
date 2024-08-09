@@ -19,7 +19,7 @@
 
       "$terminal" = "kitty";
       "$browser" = "google-chrome-stable --enable-wayland-ime";
-      "$menu" = "tofi-drun | xargs hyprctl dispatch exec --";
+      "$menu" = "wofi --show=drun | xargs hyprctl dispatch exec --";
 
       "$mainMod" = "SUPER";
 
@@ -159,7 +159,7 @@
         "$mainMod,       B, exec, $browser"
         "$mainMod SHIFT, B, exec, $browser --incognito"
         "$mainMod,       D, exec, $menu"
-        "$mainMod SHIFT, D, exec, wofi --show=drun | xargs hyprctl dispatch exec --"
+        "$mainMod,       T, exec, telegram-desktop"
         "$mainMod,       Q, exec, $terminal"
         "$mainMod,       W, exec, killall -SIGUSR1 -r waybar"
         "$mainMod,       E, exec, [float] $terminal"

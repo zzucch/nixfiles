@@ -1,6 +1,6 @@
 {
   programs.tofi = {
-    enable = true;
+    enable = false;
     settings = {
       font = "JetBrainsMono Nerd Font Mono";
       font-size = 16;
