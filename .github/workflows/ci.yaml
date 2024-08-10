@@ -1,0 +1,27 @@
+name: CI
+on: [push, pull_request]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build-iso:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Check Nixpkgs input
+        uses: DeterminateSystems/flake-checker-action@v8
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v13
+      - name: Check flake
+        run: |
+          nix flake check \
+            --all-systems \
+            --no-build
+      - name: Build ISO
+        run: nix -L build .#nixosConfigurations.kasou.config.system.build.isoImage
+      - name: Create release
+        run: |
+          gh release upload iso result/iso/nixos*.iso --clobber
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
