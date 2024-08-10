@@ -1,8 +1,19 @@
-name: CI
-on: [push, pull_request]
+name: kasou iso
+
+on: 
+  push:
+    branches:
+      - main
+    paths:
+      - 'hosts/kasou/**'
+      - 'hosts/nixos-common.nix'
+      - 'flake.nix'
+      - 'flake.lock'
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+
 jobs:
   build-iso:
     runs-on: ubuntu-22.04
@@ -19,7 +30,8 @@ jobs:
             --all-systems \
             --no-build
       - name: Build ISO
-        run: nix -L build .#nixosConfigurations.kasou.config.system.build.isoImage
+        run: nix -L build \
+          .#nixosConfigurations.kasou.config.system.build.isoImage
       - name: Create release
         run: |
           gh release upload iso result/iso/nixos*.iso --clobber
