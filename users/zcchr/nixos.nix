@@ -10,6 +10,9 @@
       KbdInteractiveAuthentication = false;
     };
   };
+  services.zerotierone = {
+    enable = true;
+  };
   programs.ssh.startAgent = true;
   users.users.zcchr = {
     isNormalUser = true;

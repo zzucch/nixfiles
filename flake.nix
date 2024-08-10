@@ -73,6 +73,20 @@
           ./hosts/dennou/configuration.nix
         ];
       };
+      # nix build .#nixosConfigurations.kasou.config.system.build.isoImage
+      kasou = mkNixosSystem {
+        inherit system;
+        modules = [
+          ./hosts/kasou/configuration.nix
+          ({
+            pkgs,
+            modulesPath,
+            ...
+          }: {
+            imports = [(modulesPath + "/installer/cd-dvd/installation-cd-minimal.nix")];
+          })
+        ];
+      };
     };
   };
 }
