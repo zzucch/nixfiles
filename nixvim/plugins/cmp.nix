@@ -35,6 +35,12 @@
               option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
             }
           ];
+          filetype = {
+            sql.sources = [
+              {name = "buffer";}
+              {name = "vim-dadbod-completion";}
+            ];
+          };
         };
       };
     };

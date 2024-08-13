@@ -25,5 +25,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  system.stateVersion = "24.05"; # Do not change
+  nix.settings.substituters = ["https://aseipp-nix-cache.freetls.fastly.net"];
+  system.stateVersion = "24.05";
 }
