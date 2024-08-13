@@ -5,6 +5,7 @@ on:
     branches:
       - main
     paths:
+      - '.github/workflows/ci.yaml'
       - 'hosts/kasou/**'
       - 'hosts/nixos-common.nix'
       - 'flake.nix'
