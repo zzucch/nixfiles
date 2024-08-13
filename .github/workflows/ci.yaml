@@ -30,8 +30,7 @@ jobs:
             --all-systems \
             --no-build
       - name: Build ISO
-        run: nix -L build \
-          .#nixosConfigurations.kasou.config.system.build.isoImage
+        run: nix -L build .#nixosConfigurations.kasou.config.system.build.isoImage
       - name: Create release
         run: |
           gh release upload iso result/iso/nixos*.iso --clobber
