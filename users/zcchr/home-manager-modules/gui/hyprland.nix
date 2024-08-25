@@ -37,7 +37,8 @@
       ];
 
       input = {
-        kb_layout = "us, ru";
+        kb_layout = "us, us, ru";
+        kb_variant = ", colemak_dh, ";
         kb_options = "caps:escape, ctrl:swap_lalt_lctl, ctrl:swap_ralt_rctl";
 
         follow_mouse = 1;

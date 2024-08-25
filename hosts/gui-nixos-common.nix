@@ -7,6 +7,7 @@
     telegram-desktop
     anki-bin
     obs-studio
+    qbittorrent-qt5
     rnote
     imv
     mpv
