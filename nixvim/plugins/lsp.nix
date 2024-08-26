@@ -60,6 +60,8 @@
             c = ["clang-format"];
             nix = ["alejandra"];
             lua = ["stylua"];
+            # https://github.com/stevearc/conform.nvim/issues/387
+            go = ["gofumpt" "golines"];
             haskell = ["ormolu"];
             markdown = ["prettierd"];
             yaml = [
@@ -73,6 +75,8 @@
     extraPackages = with pkgs; [
       alejandra
       clang-tools
+      golines
+      gofumpt
       stylua
       ormolu
       prettierd
