@@ -54,17 +54,19 @@
       };
       conform-nvim = {
         enable = true;
-        notifyOnError = true;
-        formattersByFt = {
-          c = ["clang-format"];
-          nix = ["alejandra"];
-          lua = ["stylua"];
-          haskell = ["ormolu"];
-          markdown = ["prettierd"];
-          yaml = [
-            "yamllint"
-            "yamlfmt"
-          ];
+        settings = {
+          notify_on_error = true;
+          formatters_by_ft = {
+            c = ["clang-format"];
+            nix = ["alejandra"];
+            lua = ["stylua"];
+            haskell = ["ormolu"];
+            markdown = ["prettierd"];
+            yaml = [
+              "yamllint"
+              "yamlfmt"
+            ];
+          };
         };
       };
     };
