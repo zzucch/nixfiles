@@ -170,7 +170,7 @@
         "$mainMod,       P,   pseudo, "
         "$mainMod,       Y,   togglesplit, "
         "$mainMod,       F,   fullscreen"
-        "$mainMod SHIFT, F,   fakefullscreen"
+        "$mainMod SHIFT, F,   fullscreenstate, -1 2"
         "$mainMod SHIFT, M,   exit, "
         "$mainMod SHIFT, W,   exec, swww clear 000000"
 
