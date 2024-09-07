@@ -31,13 +31,15 @@
           };
           lua-ls.enable = true;
           bashls.enable = true;
+          html.enable = true;
+          eslint.enable = true;
+          tsserver.enable = true;
           ccls.enable = true;
           cmake.enable = true;
           gopls.enable = true;
           gleam.enable = true;
           dockerls.enable = true;
           docker-compose-language-service.enable = true;
-          tsserver.enable = true;
           rust-analyzer = {
             enable = true;
             installCargo = false;
@@ -57,12 +59,31 @@
         settings = {
           notify_on_error = true;
           formatters_by_ft = {
+            bash = [
+              "shellcheck"
+              "shellharden"
+              "shfmt"
+            ];
+            sh = [
+              "shellcheck"
+              "shellharden"
+              "shfmt"
+            ];
             c = ["clang-format"];
             nix = ["alejandra"];
             lua = ["stylua"];
             # https://github.com/stevearc/conform.nvim/issues/387
             go = ["gofumpt" "golines"];
             haskell = ["ormolu"];
+            css = ["stylelint"];
+            javascript = {
+              __unkeyed-1 = "prettierd";
+              __unkeyed-2 = "prettier";
+              timeout_ms = 2000;
+              stop_after_first = true;
+            };
+            sql = ["sqlfluff"];
+            json = ["jq"];
             markdown = ["prettierd"];
             yaml = [
               "yamllint"
@@ -79,7 +100,13 @@
       gofumpt
       stylua
       ormolu
+      shfmt
+      shellcheck
+      shellharden
+      sqlfluff
+      stylelint
       prettierd
+      jq
       yamllint
       yamlfmt
     ];
