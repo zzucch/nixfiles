@@ -8,6 +8,7 @@
     anki-bin
     obs-studio
     qbittorrent-qt5
+    zoom-us
     rnote
     imv
     mpv
