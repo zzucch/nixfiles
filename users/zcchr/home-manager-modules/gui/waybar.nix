@@ -19,6 +19,7 @@
           "network"
           "cpu"
           "memory"
+          "temperature"
           "tray"
           "backlight"
           "pulseaudio"
@@ -37,6 +38,12 @@
           interval = 2;
           format = " cpu: {usage}";
           tooltip = true;
+        };
+        temperature = {
+          interval = 2;
+          critical-threshold = 80;
+          hwmon-path-abs = "/sys/devices/pci0000:00/0000:00:18.3/hwmon";
+          input-filename = "temp1_input";
         };
         tray = {
           icon-size = 20;

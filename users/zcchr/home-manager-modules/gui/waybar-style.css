@@ -14,6 +14,7 @@ tooltip {
 
 #cpu,
 #memory,
+#temperature,
 #tray,
 #clock,
 #battery,
@@ -63,6 +64,7 @@ tooltip {
   margin-right: 5px;
 }
 
+#backlight,
 #cpu {
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
@@ -72,6 +74,7 @@ tooltip {
   border-right: none;
 }
 
+#pulseaudio,
 #memory {
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
@@ -81,6 +84,7 @@ tooltip {
   border-left: none;
 }
 
+#temperature,
 #tray {
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
@@ -88,23 +92,6 @@ tooltip {
   padding: 0 8px;
   border-radius: 10px;
   border-right: none;
-}
-
-#backlight {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  margin-left: 5px;
-  padding: 0 8px;
-  border-radius: 10px 0 0 10px;
-  border-right: none;
-}
-
-#pulseaudio {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 0 8px;
-  border-radius: 0 10px 10px 0;
-  border-left: none;
 }
 
 #battery {
