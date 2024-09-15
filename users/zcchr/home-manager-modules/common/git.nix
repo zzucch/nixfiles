@@ -11,9 +11,5 @@
         push.autoSetupRemote = "true";
       };
     };
-    gh = {
-      enable = true;
-      settings.git_protocol = "ssh";
-    };
   };
 }

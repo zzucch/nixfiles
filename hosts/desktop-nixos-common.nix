@@ -11,6 +11,7 @@
 
     tree
     scc
+    tldr
     lazygit
     neofetch
     fastfetch
