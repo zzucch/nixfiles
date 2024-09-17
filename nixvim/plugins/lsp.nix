@@ -33,7 +33,7 @@
           bashls.enable = true;
           html.enable = true;
           eslint.enable = true;
-          tsserver.enable = true;
+          ts-ls.enable = true;
           ccls.enable = true;
           cmake.enable = true;
           gopls.enable = true;
