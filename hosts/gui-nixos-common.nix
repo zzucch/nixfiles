@@ -22,6 +22,7 @@
     pipewire
     pavucontrol
   ];
+  hardware.opentabletdriver.enable = true;
   fonts.packages = with pkgs; [
     jetbrains-mono
     noto-fonts
