@@ -4,5 +4,6 @@
     ./ssh.nix
     ./tmux.nix
     ./direnv.nix
+    ./pgformatter.nix
   ];
 }

@@ -40,7 +40,9 @@
           gleam.enable = true;
           dockerls.enable = true;
           docker-compose-language-service.enable = true;
-          sqls.enable = true;
+          # disabled for at least until
+          # https://github.com/sqls-server/sqls/issues/149 is closed
+          sqls.enable = false;
           rust-analyzer = {
             enable = true;
             installCargo = false;
@@ -59,6 +61,9 @@
         enable = true;
         settings = {
           notify_on_error = true;
+          format_on_save = {
+            lsp_format = "fallback";
+          };
           formatters_by_ft = {
             bash = [
               "shellcheck"
@@ -83,7 +88,7 @@
               timeout_ms = 2000;
               stop_after_first = true;
             };
-            sql = ["sqlfluff"];
+            sql = ["pg_format"];
             json = ["jq"];
             markdown = ["prettierd"];
             yaml = [
@@ -106,6 +111,7 @@
       shellharden
       sqlfluff
       stylelint
+      pgformatter
       prettierd
       jq
       yamllint
