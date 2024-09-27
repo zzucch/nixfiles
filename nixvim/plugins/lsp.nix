@@ -40,6 +40,7 @@
           gleam.enable = true;
           dockerls.enable = true;
           docker-compose-language-service.enable = true;
+          sqls.enable = true;
           rust-analyzer = {
             enable = true;
             installCargo = false;

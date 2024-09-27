@@ -47,9 +47,7 @@
       netrw_banner = 0;
       markdown_recommended_style = 0;
     };
-  };
-  # TODO: figure out how to do this without lua, if possible
-  programs.nixvim = {
+    # TODO: figure out how to do this without lua, if possible
     extraConfigLua = ''
       vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
     '';

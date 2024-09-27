@@ -3,6 +3,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
+    darwin = {
+      url = "github:lnl7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -15,6 +19,8 @@
   outputs = {
     self,
     nixpkgs,
+    nix-darwin,
+    nixvim,
     nixpkgs-stable,
     home-manager,
     ...
@@ -32,6 +38,29 @@
             inherit system;
           };
         });
+    mkDarwinSystem = {
+      modules ? [],
+      specialArgs ? {},
+    }: let
+      specialArgsMerged =
+        specialArgs
+        // specialArgsCommon
+        // {
+          pkgs-stable = import nixpkgs-stable {
+            config = {allowUnfree = true;};
+          };
+        };
+    in
+      nix-darwin.lib.darwinSystem {
+        modules =
+          [
+            inputs.nixvim.nixDarwinModules.nixvim
+            home-manager.darwinModules.home-manager
+            {home-manager.extraSpecialArgs = specialArgsMerged;}
+          ]
+          ++ modules;
+        specialArgs = specialArgsMerged;
+      };
     mkNixosSystem = {
       system,
       modules ? [],
@@ -74,6 +103,9 @@
         ];
       };
       # nix build .#nixosConfigurations.kasou.config.system.build.isoImage
+      nashi = mkDarwinSystem {
+        # TODO
+      };
       kasou = mkNixosSystem {
         inherit system;
         modules = [
