@@ -11,6 +11,7 @@
 
     tree
     scc
+    glow
     tldr
     lazygit
     neofetch
