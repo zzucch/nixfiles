@@ -1,10 +1,10 @@
 {
   virtualisation = {
     docker = {
-      enable = false;
+      enable = true;
     };
     podman = {
-      enable = true;
+      enable = false;
       dockerSocket.enable = true;
       defaultNetwork.settings.dns_enabled = true;
     };

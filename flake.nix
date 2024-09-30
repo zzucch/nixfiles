@@ -102,9 +102,10 @@
           ./hosts/dennou/configuration.nix
         ];
       };
-      # nix build .#nixosConfigurations.kasou.config.system.build.isoImage
       nashi = mkDarwinSystem {
-        # TODO
+        modules = [
+          ./hosts/nashi/configuration.nix
+        ];
       };
       kasou = mkNixosSystem {
         inherit system;
