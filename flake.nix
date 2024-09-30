@@ -102,11 +102,6 @@
           ./hosts/dennou/configuration.nix
         ];
       };
-      nashi = mkDarwinSystem {
-        modules = [
-          ./hosts/nashi/configuration.nix
-        ];
-      };
       kasou = mkNixosSystem {
         inherit system;
         modules = [
@@ -122,6 +117,14 @@
               )
             ];
           })
+        ];
+      };
+    };
+
+    darwinConfigurations = {
+      nashi = mkDarwinSystem {
+        modules = [
+          ./hosts/nashi/configuration.nix
         ];
       };
     };
