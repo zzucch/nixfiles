@@ -120,7 +120,6 @@
         ];
       };
     };
-
     darwinConfigurations = {
       nashi = mkDarwinSystem {
         modules = [
