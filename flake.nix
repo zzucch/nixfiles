@@ -3,6 +3,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     darwin = {
       url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -19,6 +23,7 @@
   outputs = {
     self,
     nixpkgs,
+    disko,
     nix-darwin,
     nixvim,
     nixpkgs-stable,
@@ -106,17 +111,7 @@
         inherit system;
         modules = [
           ./hosts/kasou/configuration.nix
-          ({
-            pkgs,
-            modulesPath,
-            ...
-          }: {
-            imports = [
-              (
-                modulesPath + "/installer/cd-dvd/installation-cd-minimal.nix"
-              )
-            ];
-          })
+          disko.nixosModules.disko
         ];
       };
     };

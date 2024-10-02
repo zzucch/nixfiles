@@ -6,9 +6,6 @@
   environment.systemPackages = with pkgs; [
     home-manager
 
-    direnv
-    nix-direnv
-
     tree
     scc
     glow
