@@ -32,6 +32,7 @@
           lua-ls.enable = true;
           bashls.enable = true;
           html.enable = true;
+          cssls.enable = true;
           eslint.enable = true;
           ts-ls.enable = true;
           ccls.enable = true;

@@ -16,7 +16,6 @@
   programs.ssh.startAgent = true;
   users.users.zcchr = {
     isNormalUser = true;
-    description = "zcchr";
     extraGroups = [
       "networkmanager"
       "input"
