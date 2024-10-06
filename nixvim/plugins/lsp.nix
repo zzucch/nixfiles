@@ -82,7 +82,6 @@
             # https://github.com/stevearc/conform.nvim/issues/387
             go = ["gofumpt" "golines"];
             haskell = ["ormolu"];
-            css = ["stylelint"];
             javascript = {
               __unkeyed-1 = "prettierd";
               __unkeyed-2 = "prettier";

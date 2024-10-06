@@ -7,7 +7,7 @@
     telegram-desktop
     anki-bin
     obs-studio
-    qbittorrent-qt5
+    qbittorrent
     easyeffects
     zoom-us
     rnote
