@@ -23,28 +23,28 @@
           };
         };
         servers = {
-          nil-ls = {
+          nil_ls = {
             enable = true;
             settings = {
               formatting.command = ["alejandra"];
             };
           };
-          lua-ls.enable = true;
+          lua_ls.enable = true;
           bashls.enable = true;
           html.enable = true;
           cssls.enable = true;
           eslint.enable = true;
-          ts-ls.enable = true;
+          ts_ls.enable = true;
           ccls.enable = true;
           cmake.enable = true;
           gopls.enable = true;
           gleam.enable = true;
           dockerls.enable = true;
-          docker-compose-language-service.enable = true;
+          docker_compose_language_service.enable = true;
           # disabled for at least until
           # https://github.com/sqls-server/sqls/issues/149 is closed
           sqls.enable = false;
-          rust-analyzer = {
+          rust_analyzer = {
             enable = true;
             installCargo = false;
             installRustc = false;
@@ -52,10 +52,11 @@
               cargo.features = "all";
             };
           };
+          protols.enable = true;
           hls.enable = true;
           marksman.enable = true;
           yamlls.enable = true;
-          dhall-lsp-server.enable = true;
+          dhall_lsp_server.enable = true;
         };
       };
       conform-nvim = {
