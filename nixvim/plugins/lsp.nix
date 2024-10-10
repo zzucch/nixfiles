@@ -82,6 +82,7 @@
             lua = ["stylua"];
             # https://github.com/stevearc/conform.nvim/issues/387
             go = ["gofumpt" "golines"];
+            proto = ["buf"];
             haskell = ["ormolu"];
             javascript = {
               __unkeyed-1 = "prettierd";
@@ -106,6 +107,7 @@
       golines
       gofumpt
       stylua
+      buf
       ormolu
       shfmt
       shellcheck
