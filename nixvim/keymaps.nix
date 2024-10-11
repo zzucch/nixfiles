@@ -19,11 +19,9 @@
           "<C-d>" = "<C-d>zz";
           "<C-u>" = "<C-u>zz";
 
-          "<leader>rw" = "vim.cmd.Ex";
-
           "<leader>x" = "<cmd>!chmod +x %<CR>";
-          "<leader>s" = "[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]";
           "<leader>ee" = "oif err != nil {<CR>}<Esc>Oreturn err<Esc>";
+          "<leader>yy" = "miggO```<Esc>Go```<Esc>ggVGygg\"_ddG\"_dd`i";
         };
       visual =
         lib.mapAttrsToList
@@ -34,6 +32,7 @@
         {
           "K" = ":m '<-2<CR>gv=gv";
           "J" = ":m '>+1<CR>gv=gv";
+          "<leader>yy" = "miVo```<Esc>gvoVO```<Esc>gvkojy\"_ddgvV\"_dd`i";
         };
       nv =
         lib.mapAttrsToList
