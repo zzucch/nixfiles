@@ -14,12 +14,12 @@
             K = "hover";
             gd = "definition";
             gD = "declaration";
-            gI = "implementation";
-            "<leader>vca" = "code_action";
-            "<leader>vrf" = "references";
-            "<leader>vrn" = "rename";
             gt = "type_definition";
             gi = "implementation";
+            gs = "signature_help";
+            "<leader>ca" = "code_action";
+            "<leader>rf" = "references";
+            "<leader>rn" = "rename";
           };
         };
         servers = {
