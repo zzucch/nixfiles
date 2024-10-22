@@ -53,7 +53,10 @@
             };
           };
           protols.enable = true;
-          hls.enable = true;
+          hls = {
+            enable = true;
+            installGhc = false;
+          };
           marksman.enable = true;
           yamlls.enable = true;
           dhall_lsp_server.enable = true;
