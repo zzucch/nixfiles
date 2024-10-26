@@ -52,7 +52,10 @@
               cargo.features = "all";
             };
           };
-          protols.enable = true;
+          protols = {
+            enable = true;
+            package = pkgs.protols;
+          };
           hls = {
             enable = true;
             installGhc = false;
