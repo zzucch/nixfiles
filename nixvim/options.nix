@@ -18,8 +18,10 @@
       smartcase = true;
       hlsearch = false;
       incsearch = true;
-      gdefault = true;
       showmatch = true;
+
+      # TODO: fugure out why do i even had this enabled in the first place
+      # gdefault = true;
 
       number = true;
       relativenumber = true;
