@@ -24,6 +24,7 @@
       number = true;
       relativenumber = true;
       cursorline = false;
+      guicursor = "";
 
       confirm = true; # Confirm to save changes before exiting modified buffer
       termguicolors = true;
