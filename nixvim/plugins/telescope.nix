@@ -4,7 +4,7 @@
     telescope = {
       enable = true;
       keymaps = {
-        "<leader>pf" = "find_files";
+        "<leader><leader>" = "find_files";
         "<C-p>" = "git_files";
         "<C-f>" = "live_grep";
       };
@@ -15,7 +15,6 @@
           "^.mypy_cache/"
           "^__pycache__/"
           "^output/"
-          "^data/"
           "%.ipynb"
         ];
       };

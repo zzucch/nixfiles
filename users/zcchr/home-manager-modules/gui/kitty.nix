@@ -7,6 +7,7 @@
       italic_font = "auto";
       bold_italic_font = "auto";
       font_size = 22;
+      cursor_blink_interval = 0;
       background_opacity = "0.5";
       foreground = "#b0b0b0";
       dynamic_background_opacity = true;
