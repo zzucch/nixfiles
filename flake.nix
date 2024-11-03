@@ -6,10 +6,6 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    darwin = {
-      url = "github:lnl7/nix-darwin";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,7 +19,6 @@
     self,
     nixpkgs,
     disko,
-    nix-darwin,
     nixvim,
     nixpkgs-stable,
     home-manager,
@@ -42,29 +37,6 @@
             inherit system;
           };
         });
-    mkDarwinSystem = {
-      modules ? [],
-      specialArgs ? {},
-    }: let
-      specialArgsMerged =
-        specialArgs
-        // specialArgsCommon
-        // {
-          pkgs-stable = import nixpkgs-stable {
-            config = {allowUnfree = true;};
-          };
-        };
-    in
-      nix-darwin.lib.darwinSystem {
-        modules =
-          [
-            inputs.nixvim.nixDarwinModules.nixvim
-            home-manager.darwinModules.home-manager
-            {home-manager.extraSpecialArgs = specialArgsMerged;}
-          ]
-          ++ modules;
-        specialArgs = specialArgsMerged;
-      };
     mkNixosSystem = {
       system,
       modules ? [],
@@ -111,13 +83,6 @@
         modules = [
           ./hosts/kasou/configuration.nix
           disko.nixosModules.disko
-        ];
-      };
-    };
-    darwinConfigurations = {
-      nashi = mkDarwinSystem {
-        modules = [
-          ./hosts/nashi/configuration.nix
         ];
       };
     };
