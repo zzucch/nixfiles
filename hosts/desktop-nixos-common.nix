@@ -7,6 +7,7 @@
     home-manager
 
     tree
+    fzf
     scc
     glow
     tldr

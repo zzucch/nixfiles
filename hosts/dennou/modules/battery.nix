@@ -1,3 +1,4 @@
+# does not work at all, will make it functional in the future, maybe
 {pkgs, ...}: {
   systemd.services.battery-monitor = {
     enable = true;

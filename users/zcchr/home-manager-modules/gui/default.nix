@@ -1,13 +1,13 @@
 {
   imports = [
     ./cursor.nix
+    ./gtk.nix
     ./hyprland.nix
     ./kitty.nix
     ./qt.nix
-    ./gtk.nix
+    ./spotify.nix
     ./swaylock.nix
     ./tofi.nix
     ./waybar.nix
-    ./spotify.nix
   ];
 }
