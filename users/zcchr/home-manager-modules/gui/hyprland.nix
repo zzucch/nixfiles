@@ -89,11 +89,13 @@
         inactive_opacity = 1.0;
         fullscreen_opacity = 1.0;
 
-        drop_shadow = false;
-        shadow_range = 30;
-        shadow_render_power = 3;
-        "col.shadow" = "0x70000000";
-        "col.shadow_inactive" = "0x10000000";
+        shadow = {
+          enabled = false;
+          range = 30;
+          render_power = 3;
+          "color" = "0x70000000";
+          "color_inactive" = "0x10000000";
+        };
       };
 
       animations = {
@@ -224,7 +226,7 @@
         "$mainMod, R, exec, hyprctl reload"
 
         # enabling decorations
-        "$mainMod, O, exec, hyprctl keyword decoration:drop_shadow true"
+        "$mainMod, O, exec, hyprctl keyword decoration:enabled true"
         "$mainMod, O, exec, hyprctl keyword decoration:blur:enabled true"
         "$mainMod, O, exec, hyprctl keyword decoration:inactive_opacity 0.75"
       ];
