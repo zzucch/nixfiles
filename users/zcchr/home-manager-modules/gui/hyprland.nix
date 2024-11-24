@@ -38,6 +38,7 @@
 
       input = {
         kb_layout = "us, ru";
+        kb_options = "caps:escape, ctrl:swap_lalt_lctl, ctrl:swap_ralt_rctl";
 
         follow_mouse = 1;
         accel_profile = "flat";
@@ -92,8 +93,8 @@
           enabled = false;
           range = 30;
           render_power = 3;
-          color = "0x70000000";
-          color_inactive = "0x10000000";
+          "color" = "0x70000000";
+          "color_inactive" = "0x10000000";
         };
       };
 
