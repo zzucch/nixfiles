@@ -24,9 +24,8 @@
       {
         mode = "n";
         key = "<leader>tt";
-        action = "<cmd>Trouble preview_split toggle<cr>";
+        action = "<cmd>Trouble diagnostics toggle<cr>";
         options = {
-          desc = "Diagnostics toggle";
           silent = true;
         };
       }
