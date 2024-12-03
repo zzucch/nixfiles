@@ -217,9 +217,7 @@
         "$mainMod, S, exec, grim - | wl-copy"
 
         # keyboard layout switching
-        # might have a script for this later on
-        "$mainMod, Space, exec, hyprctl switchxkblayout at-translated-set-2-keyboard next"
-        "$mainMod, Space, exec, hyprctl switchxkblayout sino-wealth-gaming-kb- next"
+        "$mainMod, Space, exec, hyprctl switchxkblayout all next"
 
         # i mean
         ''$mainMod SHIFT, O, exec, hyprctl keyword monitor "eDP-1,1920x1080@60,0x0,1"''

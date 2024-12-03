@@ -17,5 +17,17 @@
         disable_background = true;
       };
     };
+    extraConfigLua = ''
+      local groups = {
+            "Normal",
+            "NormalNC",
+            "CursorLine",
+            "CursorLineNC",
+      }
+
+      for _, group in ipairs(groups) do
+          vim.api.nvim_set_hl(0, group, { bg = "none" })
+      end
+    '';
   };
 }
