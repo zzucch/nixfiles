@@ -38,7 +38,7 @@
           ccls.enable = true;
           cmake.enable = true;
           gopls.enable = true;
-          gleam.enable = true;
+          gleam.enable = false;
           dockerls.enable = true;
           docker_compose_language_service.enable = true;
           # disabled for at least until
@@ -57,12 +57,12 @@
             package = pkgs.protols;
           };
           hls = {
-            enable = true;
+            enable = false;
             installGhc = false;
           };
           marksman.enable = true;
           yamlls.enable = true;
-          dhall_lsp_server.enable = true;
+          dhall_lsp_server.enable = false;
         };
       };
       conform-nvim = {
@@ -89,7 +89,7 @@
             # https://github.com/stevearc/conform.nvim/issues/387
             go = ["gofumpt" "golines"];
             proto = ["buf"];
-            haskell = ["ormolu"];
+            # haskell = ["ormolu"];
             javascript = {
               __unkeyed-1 = "prettierd";
               __unkeyed-2 = "prettier";
@@ -114,7 +114,7 @@
       gofumpt
       stylua
       buf
-      ormolu
+      # ormolu
       shfmt
       shellcheck
       shellharden
