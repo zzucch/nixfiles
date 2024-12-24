@@ -24,7 +24,6 @@
     ffmpeg
     killall
     ripgrep
-    nixos-generators
     brightnessctl
   ];
 }
