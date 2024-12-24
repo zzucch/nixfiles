@@ -2,10 +2,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,7 +14,6 @@
   outputs = {
     self,
     nixpkgs,
-    disko,
     nixvim,
     nixpkgs-stable,
     home-manager,
@@ -76,13 +71,6 @@
         inherit system;
         modules = [
           ./hosts/dennou/configuration.nix
-        ];
-      };
-      kasou = mkNixosSystem {
-        inherit system;
-        modules = [
-          ./hosts/kasou/configuration.nix
-          disko.nixosModules.disko
         ];
       };
     };
