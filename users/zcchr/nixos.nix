@@ -1,6 +1,7 @@
 {
-  config,
   abs,
+  config,
+  pkgs,
   ...
 }: {
   services.openssh = {
@@ -15,6 +16,7 @@
   };
   programs.ssh.startAgent = true;
   users.users.zcchr = {
+    shell = pkgs.fish;
     isNormalUser = true;
     extraGroups = [
       "networkmanager"
