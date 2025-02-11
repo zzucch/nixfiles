@@ -73,6 +73,12 @@
           ./hosts/dennou/configuration.nix
         ];
       };
+      kasou = mkNixosSystem {
+        inherit system;
+        modules = [
+          ./hosts/kasou/configuration.nix
+        ];
+      };
     };
   };
 }
