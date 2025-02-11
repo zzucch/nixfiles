@@ -1,8 +1,14 @@
 {abs, ...}: {
-  imports = [
-    (abs "hosts/nixos-common.nix")
-    (abs "hosts/server-nixos-common.nix")
-  ];
+  imports = let
+    moduleNames = builtins.attrNames (builtins.readDir ./modules);
+    modulePaths = map (name: ./modules + "/${name}") moduleNames;
+  in
+    [
+      ./hardware-configuration.nix
+      (abs "hosts/nixos-common.nix")
+      (abs "hosts/server-nixos-common.nix")
+    ]
+    ++ modulePaths;
   users.users.zcchr = {
     isNormalUser = true;
     extraGroups = [
