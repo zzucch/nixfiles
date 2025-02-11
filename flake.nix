@@ -10,6 +10,7 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    proxmox-nixos.url = "github:SaumonNet/proxmox-nixos";
   };
   outputs = {
     self,
@@ -17,6 +18,7 @@
     nixvim,
     nixpkgs-stable,
     home-manager,
+    proxmox-nixos,
     ...
   } @ inputs: let
     specialArgsCommon = {
@@ -77,6 +79,20 @@
         inherit system;
         modules = [
           ./hosts/kasou/configuration.nix
+          proxmox-nixos.nixosModules.proxmox-ve
+          ({
+            pkgs,
+            lib,
+            ...
+          }: {
+            services.proxmox-ve = {
+              enable = true;
+              ipAddress = "192.168.0.34";
+            };
+            nixpkgs.overlays = [
+              proxmox-nixos.overlays.${system}
+            ];
+          })
         ];
       };
     };
