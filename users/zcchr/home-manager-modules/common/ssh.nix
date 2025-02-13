@@ -10,6 +10,12 @@
       "github.com" = {
         identityFile = "~/.ssh/git";
       };
+      "kasou" = {
+        hostname = "10.244.82.78";
+      };
+      "meiro" = {
+        hostname = "10.244.200.78";
+      };
     };
   };
 }
