@@ -17,6 +17,9 @@
     slurp
     swww
 
+    amneziawg-go
+    amneziawg-tools
+
     android-studio
 
     pipewire

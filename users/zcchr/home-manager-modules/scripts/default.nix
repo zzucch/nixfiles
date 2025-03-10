@@ -4,5 +4,6 @@
     ./diagnostic.nix
     ./screenshotter.nix
     ./smv.nix
+    ./vpn.nix
   ];
 }
