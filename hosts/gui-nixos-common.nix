@@ -17,6 +17,8 @@
     slurp
     swww
 
+    android-studio
+
     pipewire
     pavucontrol
   ];
