@@ -38,7 +38,6 @@
           filetype = {
             sql.sources = [
               {name = "buffer";}
-              {name = "vim-dadbod-completion";}
             ];
           };
         };
