@@ -144,8 +144,6 @@
         "rounding 0, xwayland:1"
         "bordersize 1, xwayland:1"
         "bordercolor rgb(500050), xwayland:1"
-
-        "noinitialfocus, class:^jetbrains-(?!toolbox), floating:1"
       ];
 
       # tiling feels bad there

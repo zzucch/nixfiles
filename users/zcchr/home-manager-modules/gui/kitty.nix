@@ -16,6 +16,7 @@
       enable_audio_bell = false;
       "map kitty_mod+f6" = "change_font_size current 28";
       touch_scroll_multiplier = "12.0";
+      cursor_trail = 3;
     };
   };
 }
