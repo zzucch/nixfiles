@@ -5,5 +5,6 @@
     ./pgformatter.nix
     ./ssh.nix
     ./tmux.nix
+    ./tmux-sessionizer.nix
   ];
 }
