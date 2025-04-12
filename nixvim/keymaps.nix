@@ -16,9 +16,11 @@
           inherit action key;
         })
         {
+          "n" = "nzz";
+          "N" = "Nzz";
+          "J" = "miJ`i";
           "<C-d>" = "<C-d>zz";
           "<C-u>" = "<C-u>zz";
-
           "<leader>x" = "<cmd>!chmod +x %<CR>";
           "<leader>ee" = "oif err != nil {<CR>}<Esc>Oreturn err<Esc>";
           "<leader>yy" = "miggO```<Esc>Go```<Esc>ggVGygg\"_ddG\"_dd`i";
@@ -32,6 +34,8 @@
         {
           "K" = ":m '<-2<CR>gv=gv";
           "J" = ":m '>+1<CR>gv=gv";
+          "<leader>p" = "\"_dP";
+          "<leader>d" = "\"_dd";
           "<leader>yy" = "miVo```<Esc>gvoVO```<Esc>gvkojy\"_ddgvV\"_dd`i";
         };
       nv =
