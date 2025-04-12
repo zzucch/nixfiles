@@ -24,6 +24,7 @@
           "<leader>x" = "<cmd>!chmod +x %<CR>";
           "<leader>ee" = "oif err != nil {<CR>}<Esc>Oreturn err<Esc>";
           "<leader>yy" = "miggO```<Esc>Go```<Esc>ggVGygg\"_ddG\"_dd`i";
+          "<C-t>" = "<cmd>silent !tmux neww tmux-sessionizer<CR>";
         };
       visual =
         lib.mapAttrsToList

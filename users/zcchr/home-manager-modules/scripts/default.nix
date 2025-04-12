@@ -5,5 +5,6 @@
     ./screenshotter.nix
     ./smv.nix
     ./vpn.nix
+    ./tmux-sessionizer.nix
   ];
 }
