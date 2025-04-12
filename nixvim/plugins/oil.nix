@@ -6,6 +6,9 @@
         columns = ["icon"];
         view_options.show_hidden = true;
         deleteToTrash = true;
+        keymaps = {
+          "<C-t>" = false;
+        };
       };
     };
     keymaps = [
