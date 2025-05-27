@@ -20,8 +20,6 @@
     amneziawg-go
     amneziawg-tools
 
-    android-studio
-
     pipewire
     pavucontrol
   ];

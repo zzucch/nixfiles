@@ -22,6 +22,9 @@
       "networkmanager"
       "input"
       "wheel"
+      "plugdev"
+      "uucp"
+      "dialout"
     ];
     openssh.authorizedKeys.keyFiles = [
       (abs "ssh/zcchr-git.pub")
