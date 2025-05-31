@@ -4,8 +4,8 @@
     modulePaths = map (name: ./modules + "/${name}") moduleNames;
   in
     [
+      ./gui-pkgs.nix
       (abs "nixvim/init.nix")
-      (abs "hosts/gui-nixos-common-pkgs.nix")
       (abs "users/zcchr/nixos.nix")
     ]
     ++ modulePaths;

@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  imports = [./nixos-common-pkgs.nix];
+  imports = [./pkgs.nix];
   environment.systemPackages = with pkgs; [
     home-manager
 
@@ -11,9 +11,6 @@
     lazygit
     neofetch
     fastfetch
-
-    btop
-    htop
 
     zip
     unzip

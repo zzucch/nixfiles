@@ -9,6 +9,9 @@
     gnumake
     tmux
 
+    btop
+    htop
+
     direnv
     nix-direnv
   ];

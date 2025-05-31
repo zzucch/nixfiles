@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  imports = [./desktop-nixos-common-pkgs.nix];
+  imports = [./desktop-pkgs.nix];
   environment.systemPackages = with pkgs; [
     tofi
     wofi

@@ -5,10 +5,13 @@
   in
     [
       ./hardware-configuration.nix
-      (abs "hosts/nixos-common-pkgs.nix")
-      (abs "hosts/server-nixos-common-pkgs.nix")
+      (abs "hosts/nixos-common/pkgs.nix")
     ]
     ++ modulePaths;
+  services = {
+    openssh.enable = true;
+    cloud-init.network.enable = true;
+  };
   users.users.zcchr = {
     isNormalUser = true;
     extraGroups = [
@@ -18,6 +21,5 @@
     ];
   };
   networking.hostName = "kasou";
-  services.cloud-init.network.enable = true;
   system.stateVersion = "24.05";
 }

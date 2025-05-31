@@ -1,7 +1,7 @@
 {abs, ...}: {
   imports = [
     ./hardware-configuration.nix
-    (abs "hosts/common/configuration.nix")
+    (abs "hosts/nixos-common/configuration.nix")
   ];
   networking.hostName = "zatsumu";
   boot.loader = {
