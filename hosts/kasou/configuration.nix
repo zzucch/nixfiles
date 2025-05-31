@@ -5,8 +5,8 @@
   in
     [
       ./hardware-configuration.nix
-      (abs "hosts/nixos-common.nix")
-      (abs "hosts/server-nixos-common.nix")
+      (abs "hosts/nixos-common-pkgs.nix")
+      (abs "hosts/server-nixos-common-pkgs.nix")
     ]
     ++ modulePaths;
   users.users.zcchr = {

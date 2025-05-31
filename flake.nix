@@ -69,10 +69,16 @@
       };
     });
     nixosConfigurations = {
-      dennou = mkNixosSystem {
+      haizara = mkNixosSystem {
         inherit system;
         modules = [
-          ./hosts/dennou/configuration.nix
+          ./hosts/haizara/configuration.nix
+        ];
+      };
+      zatsumu = mkNixosSystem {
+        inherit system;
+        modules = [
+          ./hosts/zatsumu/configuration.nix
         ];
       };
       kasou = mkNixosSystem {
