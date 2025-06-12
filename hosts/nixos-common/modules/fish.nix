@@ -54,8 +54,11 @@
         end
       end
 
-      bind -M insert \t accept-autosuggestion
+      function fish_user_key_bindings
+        for mode in insert default
+          bind -M $mode \cf accept-autosuggestion
+        end
+      end
     '';
-    # ^ lowkey hate the completions but too lazy to fix
   };
 }
