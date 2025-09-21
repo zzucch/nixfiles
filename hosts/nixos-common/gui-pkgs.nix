@@ -17,9 +17,6 @@
     slurp
     swww
 
-    amneziawg-go
-    amneziawg-tools
-
     pipewire
     pavucontrol
   ];

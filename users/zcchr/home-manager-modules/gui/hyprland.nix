@@ -159,7 +159,7 @@
         "$mainMod,       B, exec, $browser"
         "$mainMod SHIFT, B, exec, $browser --incognito"
         "$mainMod,       D, exec, $menu"
-        "$mainMod,       T, exec, telegram-desktop"
+        "$mainMod,       T, exec, Telegram"
         "$mainMod,       Q, exec, $terminal"
         "$mainMod,       W, exec, killall -SIGUSR1 -r waybar"
         "$mainMod,       E, exec, [float] $terminal"
