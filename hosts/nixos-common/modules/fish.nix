@@ -4,17 +4,21 @@
     shellAbbrs = {
       t = "tmux";
       ta = "tmux a";
+      ts = "tmux-sessionizer";
 
       n = "nvim .";
 
       ga = "git add -A";
       gc = "git commit -m";
+      meow = "git commit -m \"meow\"";
       gca = "git commit --amend";
       gp = "git push";
+      gpf = "git push --force";
       gs = "git status";
       gd = "git diff --color | less";
       gds = "git diff --staged --color | less";
       gdss = "git diff --staged --stat --color | less";
+      gdms = "git diff master --staged --stat --color | less";
       gsc = "git switch -c";
       gsm = "git switch master";
       grs = "git restore --staged .";
@@ -23,17 +27,20 @@
       gb = "git bisect start";
       # NOTE: havent tested the thing in bash; for zsh, use \`
       # NOTE: it might fail when there are multiple root commits
-      gbs = "git bisect start && git bisect bad && git bisect good (git rev-list --max-parents=0 --first-parent HEAD)";
+      gbew = "git bisect start && git bisect bad && git bisect good (git rev-list --max-parents=0 --first-parent HEAD)";
       gbb = "git bisect bad";
       gbg = "git bisect good";
       gbn = "git bisect new";
       gbo = "git bisect old";
-      gbr = "git bisect reset";
+      gbend = "git bisect reset";
 
       gg = "go get";
       gmt = "go mod tidy";
       gt = "go test ./...";
       gtc = "go test -count=1 ./...";
+
+      dsa = "sudo docker stop \$(docker ps -a -q)";
+      dra = "sudo docker rm \$(docker ps -a -q)";
     };
     shellInit = ''
       set fish_greeting
