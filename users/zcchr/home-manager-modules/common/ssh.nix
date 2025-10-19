@@ -3,6 +3,10 @@
   home.file.".ssh/git-sign.pub".source = abs "ssh/zcchr-git-sign.pub";
   programs.ssh = {
     enable = true;
+    # TODO `programs.ssh` default values will be removed in the future.
+    # Consider setting `programs.ssh.enableDefaultConfig` to false,
+    # and manually set the default values you want to keep at
+    # `programs.ssh.matchBlocks."*"`.
     matchBlocks = {
       "*" = {
         identityFile = "~/.ssh/git-sign";

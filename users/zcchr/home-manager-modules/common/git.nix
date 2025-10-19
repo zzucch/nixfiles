@@ -2,9 +2,11 @@
   programs = {
     git = {
       enable = true;
-      userName = "zzucch";
-      userEmail = "nikitamilovatskiy@gmail.com";
-      extraConfig = {
+      settings = {
+        user = {
+          email = "nikitamilovatskiy@gmail.com";
+          name = "zzucch";
+        };
         commit.gpgsign = true;
         gpg.format = "ssh";
         user.signingkey = "~/.ssh/git-sign.pub";

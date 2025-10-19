@@ -118,8 +118,11 @@
         preserve_split = true;
       };
 
+      gesture = [
+        "3, horizontal, workspace"
+      ];
+
       gestures = {
-        workspace_swipe = true;
         workspace_swipe_create_new = false;
         workspace_swipe_forever = true;
       };
