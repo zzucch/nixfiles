@@ -14,6 +14,9 @@
       "github.com" = {
         identityFile = "~/.ssh/git";
       };
+      "gitlab.com" = {
+        identityFile = "~/.ssh/git";
+      };
       "kasou" = {
         hostname = "10.244.82.78";
       };

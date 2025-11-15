@@ -14,13 +14,14 @@
       gca = "git commit --amend";
       gp = "git push";
       gpf = "git push --force";
+      gu = "git pull";
       gs = "git status";
       gd = "git diff --color | less";
       gds = "git diff --staged --color | less";
       gdss = "git diff --staged --stat --color | less";
       gdms = "git diff master --staged --stat --color | less";
       gsc = "git switch -c";
-      gsm = "git switch master";
+      gsm = "git switch master || git switch main";
       grs = "git restore --staged .";
 
       gbl = "git blame -w";
