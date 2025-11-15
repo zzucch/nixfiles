@@ -40,8 +40,8 @@
       gt = "go test ./...";
       gtc = "go test -count=1 ./...";
 
-      dsa = "sudo docker stop \$(docker ps -a -q)";
-      dra = "sudo docker rm \$(docker ps -a -q)";
+      dsa = "sudo docker stop \$(sudo docker ps -a -q)";
+      dra = "sudo docker rm \$(sudo docker ps -a -q)";
     };
     shellInit = ''
       set fish_greeting
