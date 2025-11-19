@@ -8,3 +8,8 @@ clean:
 .PHONY: switch
 switch:
 	@sudo nixos-rebuild switch --flake .
+
+.PHONY: update
+update:
+	@nix flake update
+	@make switch
