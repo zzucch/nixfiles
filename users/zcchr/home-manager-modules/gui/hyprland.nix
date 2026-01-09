@@ -41,10 +41,10 @@
         kb_options = "caps:escape, ctrl:swap_lalt_lctl, ctrl:swap_ralt_rctl";
 
         follow_mouse = 1;
-        accel_profile = "flat";
+        accel_profile = "adaptive";
 
         touchpad = {
-          disable_while_typing = true;
+          # disable_while_typing = true;
           natural_scroll = true;
           scroll_factor = 0.2;
 
@@ -58,7 +58,7 @@
         };
 
         # -1.0 - 1.0, 0 means no modification.
-        sensitivity = 0;
+        sensitivity = 0.1;
       };
 
       general = {

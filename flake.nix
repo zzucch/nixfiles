@@ -10,6 +10,7 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
     proxmox-nixos.url = "github:SaumonNet/proxmox-nixos";
   };
   outputs = {
@@ -18,6 +19,7 @@
     nixvim,
     nixpkgs-stable,
     home-manager,
+    zapret-discord-youtube,
     proxmox-nixos,
     ...
   } @ inputs: let
@@ -73,6 +75,13 @@
         inherit system;
         modules = [
           ./hosts/haizara/configuration.nix
+          zapret-discord-youtube.nixosModules.default
+          {
+            services.zapret-discord-youtube = {
+              enable = true;
+              config = "general(ALT)";
+            };
+          }
         ];
       };
       zatsumu = mkNixosSystem {
