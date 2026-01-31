@@ -42,6 +42,8 @@
 
       dsa = "sudo docker stop \$(sudo docker ps -a -q)";
       dra = "sudo docker rm \$(sudo docker ps -a -q)";
+
+      mg = "make generate";
     };
     shellInit = ''
       set fish_greeting

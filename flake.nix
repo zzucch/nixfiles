@@ -88,6 +88,13 @@
         inherit system;
         modules = [
           ./hosts/zatsumu/configuration.nix
+          zapret-discord-youtube.nixosModules.default
+          {
+            services.zapret-discord-youtube = {
+              enable = true;
+              config = "general(ALT)";
+            };
+          }
         ];
       };
       kasou = mkNixosSystem {

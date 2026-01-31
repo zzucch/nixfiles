@@ -1,12 +1,12 @@
-all: switch
+all: generate
 
 .PHONY: clean
 clean:
 	@sudo nix-collect-garbage -d
 	@nix-collect-garbage -d
 
-.PHONY: switch
-switch:
+.PHONY: generate
+generate:
 	@sudo nixos-rebuild switch --flake .
 
 .PHONY: update
