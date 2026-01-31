@@ -167,6 +167,7 @@
         "$mainMod,       W, exec, killall -SIGUSR1 -r waybar"
         "$mainMod,       E, exec, [float] $terminal"
         "$mainMod SHIFT, L, exec, swaylock"
+        "$mainMod SHIFT, S, exec, systemctl suspend"
 
         "$mainMod,       Tab, togglefloating, "
         "$mainMod,       P,   pseudo, "
