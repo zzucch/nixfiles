@@ -3,6 +3,13 @@
     enable = true;
     xwayland.enable = true;
     settings = {
+      device = [
+        {
+          name = "gxtp7863:00-27c6:01e0-touchpad";
+          accel_profile = "adaptive";
+        }
+      ];
+
       monitor = [
         "eDP-1, 1920x1080@60, 0x0, 1.25"
         "desc:XMI Redmi Monitor 2804800102242, highrr, auto, 1"
@@ -46,7 +53,6 @@
           # disable_while_typing = true;
           natural_scroll = true;
           scroll_factor = 0.2;
-          # accel_profile = "adaptive";
 
           drag_lock = false;
           clickfinger_behavior = false;
