@@ -19,6 +19,8 @@
 
     pipewire
     pavucontrol
+
+    jetbrains.idea-community
   ];
   hardware.opentabletdriver.enable = true;
   fonts.packages = with pkgs; [
