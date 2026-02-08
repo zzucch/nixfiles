@@ -35,7 +35,6 @@
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
         "XCURSOR_SIZE, 24"
-        "HYPRCURSOR_SIZE, 24"
         # required until https://github.com/ankitects/anki/issues/1767 is closed
         "ANKI_WAYLAND, 1"
         # do not set GTK_IM_MODULE
@@ -50,7 +49,6 @@
         follow_mouse = 1;
 
         touchpad = {
-          # disable_while_typing = true;
           natural_scroll = true;
           scroll_factor = 0.2;
 
@@ -63,7 +61,6 @@
           output = "HDMI-A-1";
         };
 
-        # -1.0 - 1.0, 0 means no modification.
         sensitivity = 0;
       };
 
@@ -155,7 +152,6 @@
         "bordercolor rgb(500050), xwayland:1"
       ];
 
-      # tiling feels bad there
       windowrule = [
         "float,  title:Open File"
         "center, title:Open File"
@@ -224,14 +220,11 @@
         '', print,     exec, grim -g "$(slurp -d -w 1)" - | wl-copy''
         "$mainMod, S, exec, grim - | wl-copy"
 
-        # keyboard layout switching
         "$mainMod, Space, exec, hyprctl switchxkblayout all next"
 
-        # i mean
         ''$mainMod SHIFT, O, exec, hyprctl keyword monitor "eDP-1,1920x1080@60,0x0,1"''
         "$mainMod, R, exec, hyprctl reload"
 
-        # enabling decorations
         "$mainMod, O, exec, hyprctl keyword decoration:enabled true"
         "$mainMod, O, exec, hyprctl keyword decoration:blur:enabled true"
         "$mainMod, O, exec, hyprctl keyword decoration:inactive_opacity 0.75"
@@ -247,12 +240,11 @@
 
       # move/resize windows with mainMod + LMB/RMB and dragging
       bindm = [
-        "$mainMod,     mouse:272, movewindow"
-        "$mainMod,     mouse:273, resizewindow"
+        "$mainMod,         mouse:272, movewindow"
+        "$mainMod,         mouse:273, resizewindow"
         "$mainMod CONTROL, mouse:272, resizewindow"
       ];
 
-      # layer rules:
       layerrule = [
         "noanim, waybar"
       ];
