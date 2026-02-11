@@ -158,7 +158,7 @@
       ];
 
       bind = [
-        "$mainMod, C, killactive"
+        "$mainMod SHIFT, Q, killactive"
         "$mainMod, V, movecurrentworkspacetomonitor, +1"
 
         "$mainMod,       B, exec, $browser"

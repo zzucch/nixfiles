@@ -8,13 +8,14 @@
       bold_italic_font = "auto";
       font_size = 22;
       cursor_blink_interval = 0;
-      background_opacity = "0.5";
       foreground = "#b0b0b0";
       dynamic_background_opacity = true;
       confirm_os_window_close = 0;
       hide_window_decorations = true;
       enable_audio_bell = false;
       "map kitty_mod+f6" = "change_font_size current 28";
+      "map kitty_mod+down" = "set_background_opacity +0.1";
+      "map kitty_mod+up" = "set_background_opacity -0.1";
       touch_scroll_multiplier = "12.0";
       cursor_trail = 3;
     };

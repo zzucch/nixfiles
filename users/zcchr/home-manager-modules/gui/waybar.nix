@@ -16,12 +16,12 @@
           "clock"
         ];
         modules-right = [
-          "network"
-          "cpu"
-          "memory"
-          "temperature"
+          # "network"
+          # "cpu"
+          # "memory"
+          # "temperature"
           "tray"
-          "backlight"
+          # "backlight"
           "pulseaudio"
           "battery"
         ];
