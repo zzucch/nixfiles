@@ -13,7 +13,7 @@
 
       monitor = [
         "eDP-1, 1920x1080@60, 0x0, 1.25"
-        "desc:XMI Redmi Monitor 2804800102242, highrr, auto, 1"
+        "desc:Xiaomi Corporation Redmi Monitor 2804800102242, 1920x1080@75, auto, 1"
         ", preferred, auto, 1"
       ];
 
@@ -159,14 +159,14 @@
       ];
 
       bind = [
-        "$mainMod SHIFT, Q, killactive"
+        "$mainMod, Q, killactive"
         "$mainMod, V, movecurrentworkspacetomonitor, +1"
 
         "$mainMod,       B, exec, $browser"
         "$mainMod SHIFT, B, exec, $browser --incognito"
         "$mainMod,       D, exec, $menu"
         "$mainMod,       T, exec, Telegram"
-        "$mainMod,       Q, exec, $terminal"
+        "$mainMod,  Return, exec, $terminal"
         "$mainMod,       W, exec, killall -SIGUSR1 -r waybar"
         "$mainMod,       E, exec, [float] $terminal"
         "$mainMod SHIFT, L, exec, swaylock"
