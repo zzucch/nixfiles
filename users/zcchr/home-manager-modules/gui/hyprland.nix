@@ -136,7 +136,6 @@
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
 
-        new_window_takes_over_fullscreen = 2;
         focus_on_activate = true;
 
         mouse_move_enables_dpms = true;
@@ -147,15 +146,13 @@
         force_zero_scaling = true;
       };
 
-      windowrulev2 = [
-        "rounding 0, xwayland:1"
-        "bordersize 1, xwayland:1"
-        "bordercolor rgb(500050), xwayland:1"
-      ];
-
-      windowrule = [
-        "float,  title:Open File"
-        "center, title:Open File"
+      windowrulev = [
+        "rounding 0, match:xwayland 1"
+        "bordersize 1, match:xwayland 1"
+        "bordercolor rgb(500050), match:xwayland 1"
+        "float on,  match:title ^Open File$"
+        "center on, match:title ^Open File$"
+        # TODO "fullscreen state:1, match:class .*"
       ];
 
       bind = [
@@ -244,10 +241,6 @@
         "$mainMod,         mouse:272, movewindow"
         "$mainMod,         mouse:273, resizewindow"
         "$mainMod CONTROL, mouse:272, resizewindow"
-      ];
-
-      layerrule = [
-        "noanim, waybar"
       ];
     };
   };

@@ -13,6 +13,6 @@
   time.timeZone = "Europe/Moscow";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  nix.settings.substituters = ["https://aseipp-nix-cache.freetls.fastly.net"];
+  # nix.settings.substituters = ["https://aseipp-nix-cache.freetls.fastly.net"];
   system.stateVersion = "24.05";
 }

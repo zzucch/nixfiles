@@ -9,7 +9,6 @@
     glow
     tldr
     lazygit
-    neofetch
     fastfetch
 
     zip
