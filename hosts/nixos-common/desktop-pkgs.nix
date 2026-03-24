@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     home-manager
 
+    jq
     tree
     fzf
     scc

@@ -25,6 +25,8 @@
       "plugdev"
       "uucp"
       "dialout"
+      "docker"
+      "amneziawg"
     ];
     openssh.authorizedKeys.keyFiles = [
       (abs "ssh/zcchr-git.pub")

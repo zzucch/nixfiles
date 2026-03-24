@@ -11,5 +11,4 @@
   boot.extraModulePackages = [
     config.boot.kernelPackages.amneziawg
   ];
-  users.users.zcchr.extraGroups = ["amneziawg"];
 }
