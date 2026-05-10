@@ -19,5 +19,7 @@
     killall
     ripgrep
     brightnessctl
+
+    claude-code
   ];
 }
