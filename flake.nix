@@ -78,7 +78,7 @@
           {
             services.zapret-discord-youtube = {
               enable = true;
-              config = "general(ALT)";
+              configName = "general(ALT)";
             };
           }
         ];
@@ -91,7 +91,7 @@
           {
             services.zapret-discord-youtube = {
               enable = true;
-              config = "general(ALT)";
+              configName = "general(ALT)";
             };
           }
         ];
