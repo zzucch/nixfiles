@@ -6,17 +6,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixpkgs-latest.url = "github:nixos/nixpkgs/nixos-unstable";
     zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
     proxmox-nixos.url = "github:SaumonNet/proxmox-nixos";
   };
   outputs = {
     self,
     nixpkgs,
-    nixvim,
     nixpkgs-stable,
     home-manager,
     zapret-discord-youtube,
@@ -26,6 +22,10 @@
     specialArgsCommon = {
       inherit inputs;
       abs = path: ./. + ("/" + path);
+      pkgs-latest = import inputs.nixpkgs-latest {
+        inherit system;
+        config.allowUnfree = true;
+      };
     };
     system = "x86_64-linux";
     supportedSystems = [system];
@@ -55,7 +55,6 @@
         inherit system;
         modules =
           [
-            inputs.nixvim.nixosModules.nixvim
             home-manager.nixosModules.home-manager
             {home-manager.extraSpecialArgs = specialArgsMerged;}
           ]

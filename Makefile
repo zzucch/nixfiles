@@ -12,4 +12,4 @@ generate:
 .PHONY: update
 update:
 	@nix flake update
-	@make switch
+	@make generate

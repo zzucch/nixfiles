@@ -5,7 +5,6 @@
   in
     [
       ./gui-pkgs.nix
-      (abs "nixvim/init.nix")
       (abs "users/zcchr/nixos.nix")
     ]
     ++ modulePaths;
